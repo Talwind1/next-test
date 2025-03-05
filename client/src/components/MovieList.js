@@ -1,6 +1,15 @@
 import React, { useState, useEffect} from "react";
 import axios from "axios";
 import MovieCard from "./MovieCard";
+const movieGridStyle = {
+  display: "grid",
+  gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+  gap: "20px",
+  padding: "20px",
+  justifyContent: "center",
+  backgroundColor:"#00D7FF"
+
+};
 
 function MovieList() {
   const [movies, setMovies] = useState([]); // Initialize with empty list
@@ -23,9 +32,11 @@ function MovieList() {
     });
 }, []);
 
-  return movies.length === 0 ? (<p>no availeble</p>):(<div><h1>MovieList</h1>;
-  <p>movies:{movies[0]['title']}</p>
-  <div v-if="">
+  return movies.length === 0 ? (<p>no availeble</p>):(<div>  
+    <h1 style={{backgroundColor:"#00D7FF"}}>EXPLORE YOUR NEXT MOVIES AND TV SHOWS</h1>
+
+  
+  <div style={movieGridStyle}>
   {movies.map((movie) => (
         <MovieCard
           key={movie.id}  
