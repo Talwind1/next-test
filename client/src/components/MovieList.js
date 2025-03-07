@@ -52,8 +52,8 @@ function MovieList() {
   fetchMovies()
 }, []);
 
-  return loading ? (<p>loading</p>):(<div> 
-    <h1 style={{backgroundColor:"#00D7FF"}}>EXPLORE YOUR NEXT MOVIES AND TV SHOWS</h1>
+  return loading ? (<p>loading</p>):(<div  style={{backgroundColor:"#00D7FF"}}> 
+    <h1>EXPLORE YOUR NEXT MOVIES AND TV SHOWS</h1>
     <ul><input type="text" placeholder="Search name..." onChange={handleChange}/></ul>
     {/* <ul><input type="checkbox"/></ul> */}
   <div style={movieGridStyle}>
