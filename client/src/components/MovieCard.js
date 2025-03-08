@@ -13,11 +13,13 @@ const movieCardStyle = {
 
 function MovieCard({id, title, rating, pic, released}) {
   const navigate = useNavigate(); 
-  return <div>
-  <img src= {pic} alt= {title}/>
-  <h3> {title} ({released})</h3>
-  <h5> {rating} ⭐ </h5>
-<button onClick={() => {console.log("pushed",id);
+  return <div className="movie-card">
+  <img className="movie-image" src= {pic} alt= {title}/>
+  <div className="movie-name"> {title} ({released})</div>
+ <div className="rating ">
+  <h4>★{rating}  </h4>
+  </div>
+<button className="btn" onClick={() => {console.log("pushed",id);
 
   navigate(`/movies/${id}`)}}>Read more</button>
   </div>

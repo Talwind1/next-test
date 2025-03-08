@@ -1,11 +1,14 @@
 import React from "react";
 import "./Header.css";
-
+const imageContainer={
+    
+}
 const Header = () => {
   return (
     <header className="header">
-      <h1>Next Movies</h1>
-      
+      <div >
+    <img src="/images/next.png" alt="Description of image" style={{"width":"200px"}}/>
+    </div>
     </header>
   );
 };

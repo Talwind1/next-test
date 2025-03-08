@@ -1,16 +1,8 @@
 import React, { useState, useEffect} from "react";
 import MovieCard from "./MovieCard";
+import "./MovieList.css";
+
 const API_GET_MOVIES = 'http://localhost:3000/movies'
-
-const movieGridStyle = {
-  display: "grid",
-  gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-  gap: "20px",
-  padding: "20px",
-  justifyContent: "center",
-  backgroundColor:"#00D7FF"
-
-};
 
 function MovieList() {
   const [movies, setMovies] = useState([]); 
@@ -52,11 +44,17 @@ function MovieList() {
   fetchMovies()
 }, []);
 
-  return loading ? (<p>loading</p>):(<div  style={{backgroundColor:"#00D7FF"}}> 
-    <h1>EXPLORE YOUR NEXT MOVIES AND TV SHOWS</h1>
-    <ul><input type="text" placeholder="Search name..." onChange={handleChange}/></ul>
-    {/* <ul><input type="checkbox"/></ul> */}
-  <div style={movieGridStyle}>
+if (loading){
+   return  <p>loading</p> 
+  }
+return <div className="page"> 
+<div className="wrap-title">
+    <h1 className="title">EXPLORE YOUR NEXT <br/>MOVIES AND TV SHOWS</h1>
+    </div>
+    <div className="input-container"><input className="search-input" type="text" placeholder="Search name..." onChange={handleChange}/></div>
+<div className="wrap-grid" >
+  
+  <div className="movie-grid">
   {filteredMovies.map((movie) => (
         <MovieCard
           key={movie.id}  
@@ -67,8 +65,9 @@ function MovieList() {
           released={movie.released}
         />
       ))}
-  </div></div>)
-
+  </div>
+  </div>
+  // </div> 
 }
 
 export default MovieList;
