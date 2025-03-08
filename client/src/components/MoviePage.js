@@ -23,8 +23,7 @@ function MoviePage() {
   <button onClick={() => navigate(`/`)}>back</button>
   <h3> {movie['title']} ({movie['released']})</h3>
   <img src={movie['image']} alt={movie['title']}/>
-  {/* <h5>Released: </h5> */}
-  <h5> 📖 {movie['synopsis']}</h5>
+  <h5> {movie['synopsis']}</h5>
   <h5>Rating: {movie['rating']}</h5>
   <h5>Duration: {movie['runtime']}</h5>
   
