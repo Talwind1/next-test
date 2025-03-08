@@ -17,11 +17,11 @@ function MovieCard({id, title, rating, pic, released}) {
   <img className="movie-image" src= {pic} alt= {title}/>
   <div className="movie-name"> {title} ({released})</div>
  <div className="rating ">
-  <h4>★{rating}  </h4>
+  <div>★{rating}  </div>
   </div>
 <button className="btn" onClick={() => {console.log("pushed",id);
 
-  navigate(`/movies/${id}`)}}>Read more</button>
+  navigate(`/movies/${id}`)}}>Read more →</button>
   </div>
   ;
 }
