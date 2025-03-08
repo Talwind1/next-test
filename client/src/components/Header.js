@@ -1,7 +1,7 @@
 import React from "react";
 import "./Header.css";
 const imageContainer={
-    
+    disply
 }
 const Header = () => {
   return (
