@@ -8,19 +8,19 @@ opacity: 1;
 }
 
 .rating{
-    text-align: left;
+    /* text-align: left; */
     font: normal normal normal 19px/31px Arial;
     color: #000000;
-    padding: 20px;
+    padding: 10px;
     height: 80px;
     text-transform: capitalize;
     opacity: 1;
+    /* align-self: flex-start; */
 } 
-.icon {
-  width: 30px;  
-  height: auto;
-  margin-right: 10px;
-  vertical-align: middle;
+.rating-wrap{
+/* display: flex; */
+/* flex-direction: column; */
+/* align-items: start; */
 }
 
 .movie-card {
@@ -40,8 +40,8 @@ opacity: 1;
     object-fit: cover;
   }
 
-.btn
-{border: 1px solid #000000;
+.btn{
+    border: 1px solid #000000;
     border-radius: 100px;
     opacity: 1;
     background-color:transparent ;
