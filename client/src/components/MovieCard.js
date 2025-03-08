@@ -15,11 +15,11 @@ function MovieCard({id, title, rating, pic, released}) {
   const navigate = useNavigate(); 
   return <div className="movie-card">
   <img className="movie-image" src= {pic} alt= {title}/>
-  <div className="movie-name"> {title} ({released})</div>
+
+  <div className="movie-name-container"> 
+  <div className="movie-name"> {title} ({released})</div></div>
  <div className="rating-wrap ">
-  <div className="rating">
     ★{rating} 
-     </div>
   </div>
 <button className="btn" onClick={() => {console.log("pushed",id);
 
